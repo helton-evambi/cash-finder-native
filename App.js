@@ -1,13 +1,22 @@
-import { StatusBar } from 'expo-status-bar'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import LoginForm from './screens/Loginform';
 
-import { Text, View } from 'react-native'
-
-export default function App() {
+const App = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-red-400">
-      <Text>Helton Evambi</Text>
-      <StatusBar style="auto" />
+    <View style={styles.container}>
+      <Text>Content Centered</Text>
+      <LoginForm></LoginForm>
     </View>
-  )
-}
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default App;
