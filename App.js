@@ -1,13 +1,21 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
+import HomeScreen from './screens/HomeScreen'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { NavigationContainer } from '@react-navigation/native'
 
-import { Text, View } from 'react-native'
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-red-400">
-      <Text>Helton Evambi</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        {/* <Stack.Screen name="Details" component={DetailsScreen} /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
