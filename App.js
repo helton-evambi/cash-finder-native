@@ -5,7 +5,6 @@ import LoginForm from './screens/Loginform';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Content Centered</Text>
       <LoginForm></LoginForm>
     </View>
   );
@@ -13,6 +12,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor:'#D9D9D9',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

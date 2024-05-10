@@ -12,7 +12,6 @@ const LoginForm = () => {
   };
 
   return (
-    <View style={styles.container}>
       <View style={styles.formLogin}>
         <Text style={styles.title}>Login</Text>
         <TextInput
@@ -34,32 +33,28 @@ const LoginForm = () => {
         <Text>------------------ Or ------------------</Text>
         <Button title="Sign Up" onPress={handleLogin} />
       </View>
-    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-  },
   title: {
     fontSize: 24,
     marginBottom: 20,
   },
   input: {
-    width: '100%',
+    width: '90%',
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
-    marginBottom: 10,
+    marginBottom: 20,
   },
   formLogin: {
-    backgroundColor:'#D9D9D9',
+    width: '90%',
+    height:'90%',
+    borderRadius: 25,
+    backgroundColor:'#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
   },
